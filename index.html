@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#12233f" />
+  <link rel="icon" type="image/png" href="app-icon.png" />
+  <link rel="apple-touch-icon" href="app-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <title>Melodic Isles: Nightfall Resonance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell" aria-live="polite">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <button class="level-badge" id="levelBadge" aria-label="Player level">1</button>
+        <div class="brand-copy">
+          <h1>Melodic Isles <span class="edition">NIGHTFALL</span></h1>
+          <div class="xp-track"><div id="xpFill"></div><span id="xpText">0 / 100 XP</span></div>
+        </div>
+      </div>
+      <div class="resources" aria-label="Currencies">
+        <button class="resource-pill" data-currency="coins" title="Coins"><span class="res-mark">C</span><b id="coinsValue">0</b></button>
+        <button class="resource-pill" data-currency="gems" title="Gems"><span class="res-mark">G</span><b id="gemsValue">0</b></button>
+        <button class="resource-pill" data-currency="notes" title="Music Notes"><span class="res-mark">N</span><b id="notesValue">0</b></button>
+        <button class="resource-pill" data-currency="stars" title="Stars"><span class="res-mark">S</span><b id="starsValue">0</b></button>
+      </div>
+      <button class="icon-btn" id="settingsBtn" aria-label="Settings">SET</button>
+    </header>
+
+    <section class="island-tabs" id="islandTabs" aria-label="Islands"></section>
+
+    <main class="game-stage" id="stage">
+      <div class="sky-particles" id="skyParticles" aria-hidden="true"></div>
+      <div class="aurora-layer" id="auroraLayer" aria-hidden="true"></div>
+      <div class="island-backdrop" id="islandBackdrop"></div>
+      <div class="stage-copy">
+        <div>
+          <span class="eyebrow" id="islandType">STARTER ISLAND</span>
+          <h2 id="islandName">Verdant Groove</h2>
+          <p id="islandDesc"></p>
+          <div class="island-stats" id="islandStats"></div>
+        </div>
+        <div class="stage-actions">
+          <button id="collectAllBtn" class="primary-btn">Collect all</button>
+          <button id="performanceBtn" class="secondary-btn">Play song</button>
+        </div>
+      </div>
+      <div class="timer-banner hidden" id="timerBanner"></div>
+      <div class="monster-field" id="monsterField" aria-label="Placed monsters"></div>
+      <div class="empty-island" id="emptyIsland">
+        <div class="empty-icon"><span class="egg-shape"></span></div>
+        <h3>Your island is quiet.</h3>
+        <p>Buy your first monster in the Market and the song will begin.</p>
+        <button class="primary-btn" data-open="market">Open Market</button>
+      </div>
+      <div class="decor-strip" id="decorStrip"></div>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button data-nav="island" class="active"><span>I</span><small>Island</small></button>
+      <button data-nav="market"><span>M</span><small>Market</small></button>
+      <button data-nav="breed"><span>B</span><small>Breed</small></button>
+      <button data-nav="collection"><span>C</span><small>Collection</small></button>
+      <button data-nav="quests"><span>Q</span><small>Quests</small></button>
+      <button data-nav="events"><span>E</span><small>Events</small></button>
+    </nav>
+  </div>
+
+  <div class="modal-layer hidden" id="modalLayer" role="presentation">
+    <section class="modal-panel" id="modalPanel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <div><span class="eyebrow" id="modalEyebrow">MELODIC ISLES</span><h2 id="modalTitle">Panel</h2></div>
+        <button class="icon-btn" id="closeModalBtn" aria-label="Close">X</button>
+      </header>
+      <div class="modal-content" id="modalContent"></div>
+    </section>
+  </div>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+  <script src="catalog.js"></script>
+  <script src="monster-art.js"></script>
+  <script src="world-art.js"></script>
+  <script src="save-tools.js"></script>
+  <script src="audio-engine.js"></script>
+  <script src="events.js"></script>
+  <script src="game.js"></script>
+  <script src="pwa.js"></script>
+</body>
+</html>

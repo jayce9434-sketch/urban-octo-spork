@@ -1,0 +1,67 @@
+MELODIC ISLES: NIGHTFALL RESONANCE - RESONANCE FORGE QA
+Date: 2026-10-09
+Build: v5
+
+RESULT: PASS
+
+USER-REQUESTED SYSTEMS
+PASS - Every main island roster is exactly 15 species.
+PASS - Each Islet roster is exactly 12 species.
+PASS - Exact duplicate forms are blocked: one Common, one Rare, one Epic, and one Legendary slot per species.
+PASS - Save migration deduplicates old species + rarity copies.
+PASS - Monster crowd scaling is active. Full 15-monster main island scale measured 0.604.
+PASS - Full 12-monster Islet scale measured 0.696.
+PASS - One one-element Mythical species exists on every main island and is breeding-only.
+PASS - One Legendary Breed species exists on every main island and is breeding-only.
+PASS - Legendary Breed pairing rule is 3-element + 3-element.
+PASS - Mythical pairing rule is 4-element + 3-element.
+PASS - Legendary Breed base chance is 2% and reaches 10% with 10/10 Torches lit.
+PASS - Mythical base chance is 1% and reaches 10% with 10/10 Torches lit.
+PASS - Ten Resonance Torches exist on each breeding-enabled main island.
+PASS - Each Torch costs 2 Gems and burns for 24 real hours.
+PASS - Developer Grant Panel accepts exact custom amounts for Coins, Gems, Music Notes, Stars, and XP.
+PASS - XP grants use the normal level-up function.
+PASS - Island backgrounds use the new world-art renderer rather than the old generic oval stage.
+PASS - Island Map cards use destination-specific world previews.
+
+EXACT GRANT QA
+Coins: +12,345 confirmed.
+Gems: +77 confirmed.
+Music Notes: +4,321 confirmed.
+Stars: +13 confirmed.
+XP: +2,500 confirmed.
+
+SPECIAL BREED UI QA
+Legendary test status: Valid Legendary Breed pairing - 6.0% chance with 5/10 active test Torches.
+Mythical test status: Valid Mythical pairing - 5.5% chance with 5/10 active test Torches.
+All-lit Market test: Legendary Breed 10.0%, Mythical 10.0%.
+
+DESTINATION RENDER QA
+Verdant Groove: 15/15, world art rendered, no page errors.
+Frostbell Atoll: 15/15, world art rendered, no page errors.
+Ember Circuit: 15/15, world art rendered, no page errors.
+Moonlit Reverie: 15/15, world art rendered, no page errors.
+Tideglass Reef: 15/15, world art rendered, no page errors.
+Bramble Brassworks: 15/15, world art rendered, no page errors.
+Gloamforge Hollow: 15/15, world art rendered, no page errors.
+Starfall Bastion: 15/15, world art rendered, no page errors.
+Prism Hand Islet: 12/12, world art rendered, no page errors.
+Null Crown Islet: 12/12, world art rendered, no page errors.
+
+STATIC QA
+PASS - Every JavaScript file parses successfully with Node syntax checking.
+PASS - manifest.webmanifest is valid JSON.
+PASS - No external HTTP/CDN runtime dependency is present in the core HTML/CSS/JS files.
+PASS - No emoji/pictograph code points are present in game UI/source text.
+PASS - Service worker cache version bumped for this release and includes world-art.js.
+PASS - Previous v4 saves migrate into v5; v3/v2 fallback loading is retained.
+PASS - Build is GitHub Pages compatible and repository-root/flat-ZIP compatible.
+
+FIVE FRESH RUNNING-BUILD SCREENSHOTS
+1. test-1-full-island-art.png
+2. test-2-torches-and-market.png
+3. test-3-island-map-redesign.png
+4. test-4-developer-grants.png
+5. test-5-null-crown-islet.png
+
+The screenshots were captured from the exact v5 HTML/CSS/JavaScript included in this release using Chromium. No screenshots are mockups.
